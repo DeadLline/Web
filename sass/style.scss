@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_header.scss";
+@import "_intro.scss";
+@import "_about.scss";
+@import "_services.scss";
+@import "_works.scss";
+@import "_pricing.scss";
+@import "_team.scss";
+@import "_blog.scss";
+@import "_contact.scss";
+@import "_footer.scss";
+
+body {
+    @include os;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-weight: $fw-semibold;
+    font-size: 47px;
+}
+
+h3 {
+    font-weight: $fw-bold;
+    font-size: 30px; 
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.outer {
+    padding-left: $base*6;
+    padding-right: $base*6;
+}
+
+.inner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+
+.btn {
+    border:1px solid transparent;
+    outline: none;
+    padding:$base*4 $base*5;
+    font-weight: $fw-semibold;
+    text-decoration: none;
+    transition:$transition;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--primary {
+        color: #fff;
+        background-color: #00897b;
+
+        &:hover {
+            background-color: darken(#00897b,5%);
+        }
+    }
+
+    &--no-bg {
+        color: #fff;
+        border: 1px solid #fff;
+
+        &:hover {
+            color:darken(#fff,20%);
+            border:1px solid darken(#fff,20%);
+        } 
+    }
+
+    @media (max-width:$screen-x-sm) {
+
+        &--primary {
+            padding:$base*2 $base*2;
+        }
+
+        &--no-bg {
+            padding:$base*2 $base*4;
+        }
+    }
+}

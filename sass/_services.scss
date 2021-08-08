@@ -1,0 +1,105 @@
+.services {
+    background-color: #e4fdf9;
+    .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        padding: $base*20 0; 
+    }
+}
+
+.services__text {
+    font-size: 15px;
+    max-width: 50%;
+    line-height: 1.5;
+    padding-bottom: $base*20;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  
+    grid-template-rows: repeat(2, 1fr); 
+    grid-gap:20px 20px;
+    padding-bottom: $base*10;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 371px;
+        height: 476px;
+        background-color: #fff;
+        transition: .6s;
+
+        &:hover {
+            background-color: #00897b;
+            transition: .6s;
+            box-shadow: 0px 0px 36.75px 12.25px rgba(0, 0, 0, 0.15);
+
+            .services-content__img {
+                background-image: url("../img/services/services-img-hover.png");
+            }
+
+            .services-content__title {
+                color: #fff;
+            }
+
+            .services-content__text {
+                color: #fff;
+            }
+
+            .btn--no-bg {
+                color: #fff;
+                border: 2px solid #fff;
+            }
+        }
+    }
+
+    &__img {
+        background-image: url("../img/services/services-img.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 70px;
+    }
+
+    &__text {
+        max-width: 70%;
+        padding-bottom: $base*8;
+    }
+
+    .btn--no-bg {
+        color: #000;
+        border: 2px solid #000;
+    }
+}
+
+@media (max-width:$screen-lg-max) {
+    .services-content {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:$screen-sm-max) {
+    .services-content {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);  
+
+        &__item {
+            width: 270px;
+            height: 400px;
+        }
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn--no-bg {
+        margin-bottom: $base*2;
+    }
+}

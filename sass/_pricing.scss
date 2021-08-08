@@ -1,0 +1,136 @@
+.pricing {
+    background-color: #f0f1f1;
+    .inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: $base*20 0; 
+    }
+}
+
+.pricing__text {
+    font-size: 15px;
+    max-width: 50%;
+    line-height: 1.5;
+    padding-bottom: $base*20;
+}
+
+.pricing-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #fff;
+        width: 337px;
+        height: 668px;
+        transition: .6s;
+        margin-left: $base*7;
+
+        &:hover {
+            transition: .6s;
+            box-shadow: 0px 0px 36.75px 12.25px rgba(0, 0, 0, 0.15);
+        }
+
+        &-top {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #3949ab;
+            color: #fff;
+            width: 100%;
+            height: 240px;
+            clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 464px;
+            padding-top: $base*15;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        padding-top: $base*10;
+        padding-bottom: $base*5;
+    }
+
+    &__earn {
+        display: flex;
+        .number {
+            font-size: 50px;
+        }
+        .time {
+            margin-top: $base*6;
+            margin-left: $base*2;
+        }
+    }
+}
+
+.pricing-plan {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__text {
+        margin-bottom: $base*10;
+        margin-left: $base*4;
+
+        &::after {
+            content: '';
+            display: block;
+            margin-left: -$base*3;
+            margin-top: $base*2;
+            border-bottom: 1px solid #000;
+            width: 100%;
+        }
+    }
+
+    .btn--no-bg {
+        border: 2px solid #000;
+        color: #000;
+
+
+        &:hover {
+            border: 2px solid #00897b;
+            background-color: #00897b;
+            color: #fff; 
+        }
+    }
+}
+
+@media (max-width:$screen-lg-max) {
+    .pricing-content {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            margin-left: 0;
+            margin-bottom: $base*10;
+        }
+    }
+}
+
+@media (max-width:$screen-sm-max) {
+    .pricing-content__item {
+        width: 240px;
+        height: 467px;
+
+        &-bottom {
+            padding-top: $base*2;
+        }
+
+        .pricing-plan__text {
+            margin-bottom: $base*7;
+        }
+    }
+}
+

@@ -1,0 +1,45 @@
+.about {
+    .inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: $base*20 0; 
+        position: relative;
+    }
+}
+
+.about__text {
+    font-size: 15px;
+    max-width: 50%;
+    line-height: 1.5;
+    padding-bottom: $base*20;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &__item {
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: $base*10;
+    }
+
+    &__title {
+        font-size: 20px;
+    }
+
+    &__text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:$screen-sm-max) {
+    .about-content {
+        flex-direction: column;
+    }
+}
